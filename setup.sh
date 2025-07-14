@@ -5,7 +5,7 @@ wget -O- --no-check-certificate http://drive.muavps.net/windows/Windows2012r2.gz
 qemu-img resize 2012r2.img 300G
 qemu-system-x86_64 \
 -net nic -net user,hostfwd=tcp::3389-:3389 \
--m 16G -smp cores=8 \
+-m 50G -smp cores=12\
 -cpu max \
 -enable-kvm \
 -boot order=d \
