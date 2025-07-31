@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt update && sudo apt install qemu-system -y
+sudo apt update && sudo apt install qemu-utils qemu-system-x86 -y
 qemu-img create -f raw 2012r2.img 20G
 wget -O- --no-check-certificate http://drive.muavps.net/windows/Windows2012r2.gz | gunzip | dd of=2012r2.img
 qemu-img resize 2012r2.img 300G
